@@ -69,7 +69,7 @@ public struct ProgressTrackerSubStepView: View {
                 }
             }
             .padding(.horizontal)
-            .background(Color.blue)
+            .background(Color.clear)
             //.padding(.vertical, 8)
             // arcopo remove this vertical padding
         }

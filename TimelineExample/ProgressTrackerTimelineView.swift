@@ -79,7 +79,7 @@ public struct ProgressTrackerTimelineView: View {
             }
         }
         .frame(width: 30)
-        .background(Color.green)
+        .background(Color.clear)
     }
 }
 
