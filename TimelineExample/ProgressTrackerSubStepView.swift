@@ -58,6 +58,11 @@ public struct ProgressTrackerSubStepView: View {
                         })
                         .padding(.top, 12)
                     }
+                    if showDivider {
+                        Rectangle()
+                            .frame(width: .infinity, height: 1, alignment: .leading)
+                            .foregroundStyle(Color.gray.opacity(0.2))
+                    }
                 }
                 .padding(.vertical) // arcopo add the vertical padding here
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -83,7 +88,7 @@ public struct ProgressTrackerSubStepView: View {
             caption: nil,
             bodyContent: "This loan is for Sam Smith & Lisa Grey. Amount is $990,000",
             stepIndicator: .complete,
-            showDivider: false
+            showDivider: true
         )
         ProgressTrackerSubStepView(
             heading: "Borrowing Details",

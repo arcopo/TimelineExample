@@ -62,32 +62,39 @@ public struct ProgressTrackerStepView: View {
                     headingHeight: $headingHeight
                 )
                 // Main text block (heading, caption, body).
-                HStack(alignment: .center) { // arcopo put it in this extra hstack
-                    VStack(alignment: .leading, spacing: 8) {
-                        TextHeightReader(text: heading, font: .title, height: $headingHeight) // Measure height
-                            .accessibilityAddTraits(.isHeader)
-  
-                        if let c = caption {
-                            Text(c)
-                                .font(.caption)
+                VStack(spacing: 0) {
+                    HStack(alignment: .center) { // arcopo put it in this extra hstack
+                        VStack(alignment: .leading, spacing: 8) {
+                            TextHeightReader(text: heading, font: .title, height: $headingHeight) // Measure height
+                                .accessibilityAddTraits(.isHeader)
+      
+                            if let c = caption {
+                                Text(c)
+                                    .font(.caption)
+                            }
+                            if let b = bodyContent {
+                                Text(b)
+                                    .font(.body)
+                            }
                         }
-                        if let b = bodyContent {
-                            Text(b)
+                        .padding(.vertical) // arcopo add the vertical padding here
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        // Side label (e.g., monetary value).
+                        if let label = sideLabel {
+                            Text(label)
                                 .font(.body)
+                                .frame(alignment: .trailing)
+                        }
+                        // Chevron for expandable steps.
+                        if expandState != .notExpandable {
+                            Image(uiImage: expandState == .expanded ? .init(systemName: "chevron.up")! : .init(systemName: "chevron.down")!)
+                                .padding(.leading, 8)
                         }
                     }
-                    .padding(.vertical) // arcopo add the vertical padding here
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    // Side label (e.g., monetary value).
-                    if let label = sideLabel {
-                        Text(label)
-                            .font(.body)
-                            .frame(alignment: .trailing)
-                    }
-                    // Chevron for expandable steps.
-                    if expandState != .notExpandable {
-                        Image(uiImage: expandState == .expanded ? .init(systemName: "chevron.up")! : .init(systemName: "chevron.down")!)
-                            .padding(.leading, 8)
+                    if showDivider {
+                        Rectangle()
+                            .frame(width: .infinity, height: 1, alignment: .leading)
+                            .foregroundStyle(Color.gray.opacity(0.2))
                     }
                 }
                 
@@ -96,8 +103,8 @@ public struct ProgressTrackerStepView: View {
             .padding(.horizontal)
             .contentShape(Rectangle())
             .onTapGesture { onTap?() }
-            .background(Color.yellow)
-        }.background(Color.yellow)
+            .background(Color.clear)
+        }.background(Color.clear)
     }
 }
 
