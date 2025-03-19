@@ -22,7 +22,7 @@ public struct ProgressTrackerSubStepView: View {
     var actionLabel: String? = nil
     let showDivider: Bool
 
-    
+    @State private var headingHeight: CGFloat = 0 // Track height
 
     // MARK: - Body
 
@@ -32,12 +32,13 @@ public struct ProgressTrackerSubStepView: View {
                 // Sub-step timeline (always middle).
                 ProgressTrackerTimelineView(
                     stepIndicator: stepIndicator,
-                    timelinePosition: .middle
+                    timelinePosition: .middle,
+                    headingHeight: $headingHeight
                 )
                 // Text block for sub-step.
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(heading)
-                        .font(.body)
+                    TextHeightReader(text: heading, font: .body, height: $headingHeight) // Measure height
+                        .accessibilityAddTraits(.isHeader)
                     if let c = caption {
                         Text(c)
                             .fontWeight(.thin)
@@ -58,7 +59,7 @@ public struct ProgressTrackerSubStepView: View {
                         .padding(.top, 12)
                     }
                 }
-                .padding(.vertical, 8) // arcopo add the vertical padding here
+                .padding(.vertical) // arcopo add the vertical padding here
                 .frame(maxWidth: .infinity, alignment: .leading)
                 // Optional side label.
                 if let label = sideLabel {

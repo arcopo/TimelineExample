@@ -14,19 +14,21 @@ public struct ProgressTrackerSubStepCenterButtonView: View {
     let stepIndicator: StepIndicator
     let showDivider: Bool
 
+    @State var headingHeight: CGFloat = 4
+    
     public var body: some View {
         VStack(spacing: 0) {
             HStack {
                 // Centered timeline icon view.
-                ProgressTrackerTimelineView(stepIndicator: stepIndicator, timelinePosition: .middle)
+                ProgressTrackerTimelineView(stepIndicator: stepIndicator, timelinePosition: .middle, headingHeight: $headingHeight)
                 Spacer(minLength: 16)
                 Button(buttonLabel) {
                     // Handle button action.
-                }
+                }.padding(.vertical, 8)
                 Spacer(minLength: 16)
             }
             .padding(.horizontal)
-            .padding(.vertical, 8)
+            
         }
     }
 }

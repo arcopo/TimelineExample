@@ -48,7 +48,7 @@ public struct ProgressTrackerStepView: View {
     let showDivider: Bool
     var onTap: (() -> Void)? = nil
 
-    
+    @State private var headingHeight: CGFloat = 0 // Track height
 
     // MARK: - Body
 
@@ -58,14 +58,15 @@ public struct ProgressTrackerStepView: View {
                 // Timeline view with dashed line and icon.
                 ProgressTrackerTimelineView(
                     stepIndicator: stepIndicator,
-                    timelinePosition: timelinePosition
+                    timelinePosition: timelinePosition,
+                    headingHeight: $headingHeight
                 )
                 // Main text block (heading, caption, body).
                 HStack(alignment: .center) { // arcopo put it in this extra hstack
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(heading)
-                            .font(.subheadline)
+                        TextHeightReader(text: heading, font: .title, height: $headingHeight) // Measure height
                             .accessibilityAddTraits(.isHeader)
+  
                         if let c = caption {
                             Text(c)
                                 .font(.caption)

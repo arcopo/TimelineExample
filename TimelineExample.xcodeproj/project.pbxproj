@@ -6,17 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1C8ACCD52D8AB529006ED2D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8ACCC92D8AB529006ED2D9 /* Preview Assets.xcassets */; };
+		1C8ACCD62D8AB529006ED2D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8ACCCB2D8AB529006ED2D9 /* Assets.xcassets */; };
+		1C8ACCD72D8AB529006ED2D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCCC2D8AB529006ED2D9 /* ContentView.swift */; };
+		1C8ACCD82D8AB529006ED2D9 /* HomeBuyingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCCD2D8AB529006ED2D9 /* HomeBuyingSection.swift */; };
+		1C8ACCD92D8AB529006ED2D9 /* ProgressTrackerCenterTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCCE2D8AB529006ED2D9 /* ProgressTrackerCenterTimelineView.swift */; };
+		1C8ACCDA2D8AB529006ED2D9 /* ProgressTrackerStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCCF2D8AB529006ED2D9 /* ProgressTrackerStepView.swift */; };
+		1C8ACCDB2D8AB529006ED2D9 /* ProgressTrackerSubStepCenterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCD02D8AB529006ED2D9 /* ProgressTrackerSubStepCenterButtonView.swift */; };
+		1C8ACCDC2D8AB529006ED2D9 /* ProgressTrackerSubStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCD12D8AB529006ED2D9 /* ProgressTrackerSubStepView.swift */; };
+		1C8ACCDD2D8AB529006ED2D9 /* ProgressTrackerTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCD22D8AB529006ED2D9 /* ProgressTrackerTimelineView.swift */; };
+		1C8ACCDE2D8AB529006ED2D9 /* TimelineExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8ACCD32D8AB529006ED2D9 /* TimelineExampleApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1C8ACCAA2D89F9AC006ED2D9 /* TimelineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimelineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8ACCC92D8AB529006ED2D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1C8ACCCB2D8AB529006ED2D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C8ACCCC2D8AB529006ED2D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C8ACCCD2D8AB529006ED2D9 /* HomeBuyingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuyingSection.swift; sourceTree = "<group>"; };
+		1C8ACCCE2D8AB529006ED2D9 /* ProgressTrackerCenterTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerCenterTimelineView.swift; sourceTree = "<group>"; };
+		1C8ACCCF2D8AB529006ED2D9 /* ProgressTrackerStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerStepView.swift; sourceTree = "<group>"; };
+		1C8ACCD02D8AB529006ED2D9 /* ProgressTrackerSubStepCenterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerSubStepCenterButtonView.swift; sourceTree = "<group>"; };
+		1C8ACCD12D8AB529006ED2D9 /* ProgressTrackerSubStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerSubStepView.swift; sourceTree = "<group>"; };
+		1C8ACCD22D8AB529006ED2D9 /* ProgressTrackerTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerTimelineView.swift; sourceTree = "<group>"; };
+		1C8ACCD32D8AB529006ED2D9 /* TimelineExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineExampleApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		1C8ACCAC2D89F9AC006ED2D9 /* TimelineExample */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TimelineExample;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1C8ACCA72D89F9AC006ED2D9 /* Frameworks */ = {
@@ -32,7 +47,7 @@
 		1C8ACCA12D89F9AC006ED2D9 = {
 			isa = PBXGroup;
 			children = (
-				1C8ACCAC2D89F9AC006ED2D9 /* TimelineExample */,
+				1C8ACCD42D8AB529006ED2D9 /* TimelineExample */,
 				1C8ACCAB2D89F9AC006ED2D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +58,31 @@
 				1C8ACCAA2D89F9AC006ED2D9 /* TimelineExample.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1C8ACCCA2D8AB529006ED2D9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1C8ACCC92D8AB529006ED2D9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1C8ACCD42D8AB529006ED2D9 /* TimelineExample */ = {
+			isa = PBXGroup;
+			children = (
+				1C8ACCCA2D8AB529006ED2D9 /* Preview Content */,
+				1C8ACCCB2D8AB529006ED2D9 /* Assets.xcassets */,
+				1C8ACCD32D8AB529006ED2D9 /* TimelineExampleApp.swift */,
+				1C8ACCCC2D8AB529006ED2D9 /* ContentView.swift */,
+				1C8ACCCD2D8AB529006ED2D9 /* HomeBuyingSection.swift */,
+				1C8ACCCF2D8AB529006ED2D9 /* ProgressTrackerStepView.swift */,
+				1C8ACCD12D8AB529006ED2D9 /* ProgressTrackerSubStepView.swift */,
+				1C8ACCD22D8AB529006ED2D9 /* ProgressTrackerTimelineView.swift */,
+				1C8ACCD02D8AB529006ED2D9 /* ProgressTrackerSubStepCenterButtonView.swift */,
+				1C8ACCCE2D8AB529006ED2D9 /* ProgressTrackerCenterTimelineView.swift */,
+			);
+			path = TimelineExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +99,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				1C8ACCAC2D89F9AC006ED2D9 /* TimelineExample */,
 			);
 			name = TimelineExample;
 			packageProductDependencies = (
@@ -109,6 +146,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8ACCD52D8AB529006ED2D9 /* Preview Assets.xcassets in Resources */,
+				1C8ACCD62D8AB529006ED2D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8ACCD72D8AB529006ED2D9 /* ContentView.swift in Sources */,
+				1C8ACCD82D8AB529006ED2D9 /* HomeBuyingSection.swift in Sources */,
+				1C8ACCD92D8AB529006ED2D9 /* ProgressTrackerCenterTimelineView.swift in Sources */,
+				1C8ACCDA2D8AB529006ED2D9 /* ProgressTrackerStepView.swift in Sources */,
+				1C8ACCDB2D8AB529006ED2D9 /* ProgressTrackerSubStepCenterButtonView.swift in Sources */,
+				1C8ACCDC2D8AB529006ED2D9 /* ProgressTrackerSubStepView.swift in Sources */,
+				1C8ACCDD2D8AB529006ED2D9 /* ProgressTrackerTimelineView.swift in Sources */,
+				1C8ACCDE2D8AB529006ED2D9 /* TimelineExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

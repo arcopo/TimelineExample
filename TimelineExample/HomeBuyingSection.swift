@@ -101,7 +101,7 @@ struct HomeBuyingSection: View {
                 )
             }
             
-            ProgressTrackerSubStepCenterButtonView(buttonLabel: "Invoice", stepIndicator: .substepComplete, showDivider: false)
+            //ProgressTrackerSubStepCenterButtonView(buttonLabel: "Invoice", stepIndicator: .substepComplete, showDivider: false)
 
             // Step 3: "Your Property" (non-expandable).
             ProgressTrackerStepView(
